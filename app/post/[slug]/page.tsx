@@ -8,11 +8,12 @@ import Image from "next/image";
 async function getData(slug: string) {
   const query = `*[_type == "post" && slug.current == "${slug}"][0]`;
 
-  const data = await client.fetch(query, { next: { revalidate: 60 } });
+  const data = await client.fetch(query);
 
   return data;
 }
 
+export const revalidate = 60;
 export default async function SlugPage({
   params,
 }: {
@@ -40,7 +41,7 @@ export default async function SlugPage({
         <div className="space-y-1 text-center">
           <div className="space-y-10">
             <div>
-              <p className="text-base font-medium leading-6 text-teal-500">
+              <p className="text-base font-medium leading-6 text-[#fca311]">
                 {new Date(data._createdAt).toISOString().split("T")[0]}
               </p>
             </div>
