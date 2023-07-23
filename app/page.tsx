@@ -28,6 +28,14 @@ export default async function IndexPage() {
                 <p className="text-base font-medium leading-6 text-[#fca311]">
                   {new Date(post._createdAt).toISOString().split("T")[0]}
                 </p>
+                <p className="text-base font-small leading-6 text-[#fca311]">
+                  {
+                    new Date(post._createdAt)
+                      .toISOString()
+                      .split("T")[1]
+                      .split(".")[0]
+                  }
+                </p>
               </div>
 
               <Link

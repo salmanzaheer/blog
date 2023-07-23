@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center w-full">
           <Link href="/">
             <h1 className="text-2xl font-medium">
-              Salman <span className="text-[#fca311]">Blog</span>
+              Salman <span className="text-[#fca311]">Zaheer</span>
             </h1>
           </Link>
 

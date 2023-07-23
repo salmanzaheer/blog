@@ -44,6 +44,14 @@ export default async function SlugPage({
               <p className="text-base font-medium leading-6 text-[#fca311]">
                 {new Date(data._createdAt).toISOString().split("T")[0]}
               </p>
+              <p className="text-base font-small leading-6 text-[#fca311]">
+                {
+                  new Date(data._createdAt)
+                    .toISOString()
+                    .split("T")[1]
+                    .split(".")[0]
+                }
+              </p>
             </div>
           </div>
 
