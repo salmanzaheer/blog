@@ -21,7 +21,7 @@ export default async function IndexPage() {
       </div>
       <ul>
         {data.map((post) => (
-          <li key={post._id} className="py-4">
+          <li key={post._createdAt} className="py-4">
             <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
               <div>
                 <p className="text-base font-medium leading-6 text-teal-500">
