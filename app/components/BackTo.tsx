@@ -1,13 +1,14 @@
 import Link from "next/link";
+import va from "@vercel/analytics";
 
 export default function BackTo() {
   return (
-    <Link
-      href="https://salmanzaheer.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <button>
+    <Link href="https://salmanzaheer.com" target="_blank">
+      <button
+        onClick={() => {
+          va.track("BackToPortfolio");
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

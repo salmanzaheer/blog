@@ -1,6 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import va from "@vercel/analytics";
 
 export default function ThemeButton() {
   const { setTheme, resolvedTheme } = useTheme();
